@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+  h1, h2, h3, h4, h5, h6 { font-family: 'Cabin', sans-serif; --font-sans: 'Cabin'; }
+</style>
+<style>
+  body { font-family: 'Manrope', sans-serif; --font-sans: 'Manrope'; }
+</style>
+
+<script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="w-full space-y-6 px-4 py-10 md:px-10">
+    <div class="mx-auto max-w-4xl space-y-4">
+      <div class="space-y-2 text-center">
+        <h1 class="text-3xl font-bold">Symptom Checker</h1>
+        <p class="text-gray-500 dark:text-gray-400">Enter your symptoms and fever degree to check if you might have a specific disease</p>
+      </div>
+      <div class="grid gap-4">
+        <div class="space-y-2">
+          <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="symptoms"> Symptoms </label>
+          <input class="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" id="symptoms" placeholder="Fever, Headache, Cough" />
+        </div>
+        <div class="space-y-2">
+          <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="fever"> Fever (in °C) </label>
+          <input class="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" type="number" id="fever" placeholder="e.g. 38.5" step="0.1" required="" />
+          <div class="flex gap-4">
+            <div>
+              <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="fever">Gender</label>
+              <input class="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" type="text" id="fever" placeholder="e.g. Male" step="0.1" required="" />
+            </div>
+            <div>
+              <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="fever"> Age </label>
+              <input class="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" type="number" id="fever" placeholder="e.g. 18" step="0.1" required="" />
+            </div>
+          </div>
+        </div>
+        <button class="ring-offset-background focus-visible:ring-ring inline-flex h-10 w-full items-center justify-center whitespace-nowrap rounded-md bg-black px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-black/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">Check</button>
+      </div>
+      <div class="grid gap-2">
+        <h2 class="font-semibold">Result</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">You might have Influenza. Please consult a doctor for further diagnosis and treatment.</p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
